@@ -1,0 +1,601 @@
+@font-face {
+	font-family: 'Unbounded';
+	src: url('../fonts/Unbounded.ttf') format('truetype');
+	font-weight: bold;
+}
+@font-face {
+	font-family: 'Hockey Club';
+	src: url('../fonts/hockey_club.eot?') format('eot'),
+		url('../fonts/hockey_club.woff') format('woff'),
+		url('../fonts/hockey_club.ttf') format('truetype'),
+		url('../fonts/hockey_club.svg#Hockey-Club') format('svg');
+	font-weight: bold;
+}
+:root {
+	--accent-color-red: #b04b51;
+	--accent-color-blue: #6589c7;
+	--background-color-blue: #015382;
+}
+/* Global */
+html {
+	scroll-behavior: smooth;
+}
+body {
+	font-family: 'Unbounded', monospace;
+	font-weight: bold;
+}
+.header {
+	/* height: 100px; */
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 50px 5vw 20px 5vw;
+}
+.menu {
+	border: 6px solid #b6ddec;
+	border-radius: 50px;
+	padding: 10px;
+}
+.menu > ul {
+	margin-left: 3vw;
+	margin-right: 3vw;
+	display: flex;
+	gap: 3vw;
+	font-size: 20px;
+}
+.btn {
+	background: var(--accent-color-red);
+	border: var(--accent-color-red) 1px solid;
+	font-weight: bolder;
+	padding: 18px;
+	border-radius: 50px;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+.btn:hover,
+.prices-element-btn:hover,
+.form-btn:hover {
+	background: white;
+	border: var(--accent-color-red) 1px solid;
+	transition: all 0.3s;
+}
+a {
+	transition: all 0.3s;
+}
+a:hover {
+	color: var(--accent-color-red);
+	transition: all 0.3s;
+}
+a:active {
+	color: grey;
+	transition: all 0.3s;
+}
+.btn:active,
+.prices-element-btn:active,
+.form-btn:active {
+	background: grey;
+	border: white 1px solid;
+	transition: all 0.3s;
+}
+.background {
+	/* z-index: -2;
+	position: absolute; */
+	background: url(../img/testbg.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	/* width: 100%; */
+	/* height: auto; */
+}
+
+.main-title {
+	margin-top: 70px;
+}
+.main-title-dc,
+.main-title-hockey {
+	padding: 40px;
+	font-size: 15vw;
+	font-family: 'Hockey Club', monospace;
+}
+.main-title-dc {
+	animation: left 0.7s ease-out;
+}
+.main-title-hockey {
+	margin-right: 20px;
+	text-align: right;
+	animation: right 0.7s ease-out;
+}
+.sub-title {
+	margin-left: auto;
+	margin-right: 8em;
+	line-height: 32px;
+	max-width: 25%;
+	font-size: 26px;
+}
+/* Create Atmosphere */
+.create_atmosphere {
+	margin-top: 180px;
+	margin-left: 5vw;
+	max-width: 55%;
+	line-height: 100px;
+}
+.create_atmosphere > p {
+	font-size: 3vw;
+}
+.text-in-bluebox,
+.text-in-redbox {
+	font-size: 3vw;
+	padding: 10px;
+	border-radius: 50px;
+}
+.text-in-bluebox {
+	background-color: var(--accent-color-blue);
+}
+/* Individual Attention */
+.individual_attention {
+	margin-top: 250px;
+	margin-left: auto;
+	margin-right: 4vw;
+	max-width: 60%;
+	line-height: 100px;
+	text-align: right;
+}
+.individual_attention > p {
+	font-size: 3vw;
+}
+.text-in-redbox {
+	background-color: var(--accent-color-red);
+}
+/* Slider */
+.slider {
+	margin: 300px auto;
+	width: 73%;
+}
+.slider-title_container {
+	height: 100%;
+	position: relative;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr;
+	flex-direction: row;
+}
+.slider-title {
+	font-family: Hockey Club;
+	font-size: 15vw;
+}
+.slider-title_absolute {
+	font-family: Unbounded;
+	position: absolute;
+	left: 30vw;
+	top: 8vw;
+}
+
+.slider-subtitle {
+	font-size: 26px;
+	margin-left: 50px;
+}
+.sliderbtns {
+	grid-area: 2/2/2/3;
+	position: absolute;
+	margin-top: 0px;
+	top: -150px;
+	left: 150px;
+	justify-content: center;
+	display: flex;
+	gap: 15px;
+}
+.slider-btn_img {
+	object-fit: fill;
+	height: 30px;
+	width: 30px;
+}
+.slider-btn {
+	padding: 30px;
+	border: #000 2px solid;
+	border-radius: 100%;
+}
+.slider-slider {
+	margin-top: 100px;
+}
+/* Prices */
+.prices {
+	max-width: 90%;
+	margin: 0 auto;
+	display: grid;
+	padding: 40px;
+	padding-bottom: 80px;
+	background: var(--background-color-blue);
+	border-radius: 50px;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 0.1fr 1fr 1fr;
+	gap: 100px;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+.prices-title {
+	font-size: 19vw;
+	text-align: center;
+	grid-area: 1/1/1/3;
+}
+.prices-element {
+	padding: 40px;
+	width: 680px;
+	height: 580px;
+	display: flex;
+	flex-direction: column;
+
+	border-radius: 50px;
+	justify-self: center;
+	align-self: center;
+	position: relative;
+}
+.prices-element-title {
+	width: 100%;
+	text-align: center;
+	font-size: 4vw;
+}
+.individual-title {
+	font-size: 2.4vw;
+}
+.prices-element-text {
+	margin-top: 50px;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.prices-element-price {
+	margin-top: auto;
+	font-size: 4em;
+}
+.prices-element-btn {
+	border: var(--accent-color-red) 1px solid;
+	margin-top: 20px;
+	align-self: start;
+	cursor: pointer;
+}
+.element-1 {
+	background: url(../img/prices-img1.png);
+}
+.element-2 {
+	background: url(../img/prices-img2.png);
+}
+.element-3 {
+	background: url(../img/prices-img3.png);
+}
+.element-4 {
+	background: url(../img/prices-img4.png);
+}
+.element-1,
+.element-2,
+.element-3,
+.element-4 {
+	background-size: cover;
+	background-position: 100% 100%;
+	background-repeat: no-repeat;
+}
+/* FORM */
+.form-container {
+	display: flex;
+	width: 100%;
+}
+.form {
+	display: flex;
+	flex-direction: column;
+	padding: 40px;
+	max-width: 40%;
+	margin: 0 auto;
+	justify-content: space-evenly;
+	padding-bottom: 400px;
+}
+.form-input {
+	color: gray;
+	font-size: 2em;
+	padding-left: 40px;
+	padding-bottom: 20px;
+	border-bottom: gray 4px solid;
+}
+.form-btn {
+	font-size: 4em;
+	padding: 20px;
+	align-self: center;
+	cursor: pointer;
+	border: var(--accent-color-red) 1px solid;
+}
+.form-title {
+	margin-top: 200px;
+	margin-bottom: 50px;
+	font-size: 6vw;
+	max-width: 82%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.form-box {
+	font-size: 6vw;
+}
+/* footer */
+.footer {
+	margin-top: 250px;
+	display: flex;
+	height: 400px;
+	justify-content: space-evenly;
+	align-items: center;
+}
+.footer-img {
+	height: 300px;
+}
+.footer-title {
+	font-size: 4em;
+}
+.footer-subcontainer {
+	display: flex;
+	justify-content: space-around;
+}
+.footer-subsubcontainer {
+	display: flex;
+	flex-direction: column;
+	margin-top: 40px;
+	gap: 20px;
+	font-size: 2em;
+}
+/* Animation */
+@keyframes left {
+	0% {
+		transform: translateX(-1000px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+@keyframes right {
+	0% {
+		transform: translateX(1000px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+@media (max-width: 1800px) {
+	* {
+		transition: all 0.3s;
+	}
+
+	.prices {
+		gap: 10px;
+	}
+}
+@media (max-width: 1565px) {
+	.form-container > img {
+		display: none;
+	}
+	.individual-title {
+		font-size: 4vw;
+	}
+	.sliderbtns {
+		top: -70px;
+		left: 50px;
+	}
+	.prices {
+		max-width: 90%;
+		grid-template-columns: 1fr;
+	}
+	.prices-title {
+		grid-area: auto;
+	}
+	.prices-element {
+		padding: 40px;
+		width: 70%;
+		height: 70vh;
+	}
+	.element-1::before,
+	.element-2::before,
+	.element-3::before,
+	.element-4::before {
+		left: auto;
+		right: 0;
+		height: 90%;
+		background-size: contain;
+	}
+	.form-title {
+		margin-top: 50px;
+	}
+	.slider {
+		margin-top: 150px;
+		margin-bottom: 100px;
+	}
+	.create_atmosphere {
+		line-height: 70px;
+	}
+	.individual_attention {
+		line-height: 70px;
+		margin-top: 150px;
+	}
+	.footer {
+		margin-top: 0;
+	}
+	.form {
+		padding-bottom: 0;
+		padding: 0;
+		max-width: 80%;
+		margin-top: 50px;
+		justify-content: start;
+		gap: 80px;
+	}
+	.form-title {
+		font-size: 10vw;
+		max-width: 90%;
+	}
+	.form-box {
+		font-size: 10vw;
+	}
+
+	.footer-img {
+		height: 20vh;
+	}
+	.footer-title {
+		font-size: 4vw;
+	}
+	.footer-subcontainer {
+		font-size: 1vw;
+	}
+}
+@media (max-width: 1400px) {
+	.menu > ul {
+		margin-left: 1%;
+		margin-right: 1vw;
+		gap: 1vw;
+	}
+}
+@media (max-width: 1330px) {
+	.sliderbtns {
+		top: -40px;
+	}
+}
+@media (max-width: 1255px) {
+	.sliderbtns {
+		top: -20px;
+	}
+}
+@media (max-width: 1200px) {
+	.sub-title {
+		max-width: 35%;
+		margin-right: 6vw;
+	}
+	.individual_attention {
+		margin-top: 200px;
+	}
+	.menu {
+		display: none;
+	}
+}
+@media (max-width: 1050px) {
+	.background {
+		background: url(../img/bg-mobile.png);
+		background-repeat: no-repeat;
+		background-size: 100% 105%;
+	}
+	.create_atmosphere {
+		line-height: 50px;
+	}
+	.individual_attention {
+		margin-top: 150px;
+		line-height: 50px;
+	}
+	.sub-title {
+		font-size: 2vw;
+	}
+	.sliderbtns {
+		margin-top: 30px;
+		position: static;
+		grid-area: 2/1/2/3;
+	}
+	.slider-slider {
+		margin-top: 30px;
+	}
+	.prices-element {
+		width: 90%;
+	}
+	.element-1::before,
+	.element-2::before,
+	.element-3::before,
+	.element-4::before {
+		width: 70%;
+	}
+	.element-2::before,
+	.element-3::before {
+		width: 40%;
+	}
+}
+@media (max-width: 900px) {
+	.element-1.prices-element-text.prices-element-price {
+		margin-top: 0;
+	}
+	.prices-element-price {
+		/* margin-top: 30vw; */
+		font-size: 8vw;
+	}
+}
+@media (max-width: 768px) {
+	.element-1::before {
+		width: 50%;
+	}
+	.create_atmosphere {
+		margin-top: 50px;
+	}
+	.slider-subtitle {
+		font-size: 3vw;
+	}
+}
+@media (max-width: 500px) {
+	.prices-element {
+		height: fit-content;
+	}
+	.form-btn {
+		font-size: 5vw;
+	}
+	.form-input {
+		font-size: 5vw;
+	}
+	.footer-subsubcontainer {
+		font-size: 3vw;
+	}
+	.form-title {
+		line-height: 70px;
+	}
+	.slider-btn {
+		padding: 10px;
+	}
+	.create_atmosphere > p {
+		font-size: 4vw;
+	}
+	.text-in-bluebox {
+		font-size: 4vw;
+	}
+	.create_atmosphere {
+		margin-top: 180px;
+		max-width: 70%;
+		line-height: 35px;
+	}
+	.individual_attention {
+		/* margin-top: 180px; */
+		line-height: 35px;
+		max-width: 90%;
+	}
+	.individual_attention > p {
+		font-size: 4vw;
+	}
+	.text-in-redbox {
+		font-size: 4vw;
+	}
+	.form-box {
+		font-size: 10vw;
+	}
+	.sub-title {
+		font-size: 4vw;
+		max-width: 70%;
+	}
+	.main-title-dc {
+		padding: 20px;
+	}
+	.main-title-hockey {
+		padding: 20px;
+		margin-right: 0;
+	}
+	.header > img {
+		height: 50px;
+	}
+	.btn-small {
+		font-size: 3vw;
+	}
+}
+@media (max-width: 450px) {
+	.prices-element-text {
+		margin-top: 20px;
+	}
+	.create_atmosphere {
+		margin-top: 100px;
+	}
+}

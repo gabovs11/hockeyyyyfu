@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" media="(prefers-color-scheme: light)" content="rgb(150,206, 233)" />
+	<meta name="theme-color" media="(prefers-color-scheme: dark)" content="rgb(0, 74, 116)" />
+	<link rel="stylesheet" href="styles/reset.css">
+	<link rel="stylesheet" href="styles/style.css">
+	<title>DC19 Hockey</title>
+</head>
+
+<body>
+	<div class="background">
+		<header class="header">
+			<img src="img/logo.png" alt="logo">
+			<nav class=" menu">
+				<ul>
+					<li><a href="#">новости</a></li>
+					<li><a href="#info">информация</a></li>
+					<li><a href="#photos">фоторепортаж</a></li>
+					<li><a href="#contacts">контакты</a></li>
+				</ul>
+			</nav>
+			<button class="btn btn-small" onclick="window.location.href='#form'">ЗАПИСАТЬСЯ</button>
+		</header>
+		<main class="main">
+			<div class="main-title">
+				<p class="main-title-dc">DC 19</p>
+				<p class="main-title-hockey">HOCKEY</p>
+				<p class="sub-title">проходит набор в
+					команду мальчиков и
+					девочек 2013–2019 года рождения</p>
+			</div>
+			<div class="create_atmosphere" id="info">
+				<p>
+					создаем <span class="text-in-bluebox">правильную</span>
+					атмосферу для креативного развития
+					<span class="text-in-bluebox">
+						юного хоккеиста!</span>
+				</p>
+			</div>
+			<div class="individual_attention">
+				<p>
+					особое внимание уделяется <span class="text-in-redbox"> индивидуальному </span>подходу к каждому ученику
+				</p>
+			</div>
+			<div class="slider" id="photos">
+				<div class="slider-title_container">
+					<span class="slider-title">250+ <span class=" text-in-bluebox slider-title_absolute">детей</span></span>
+					<div class="slider-subtitle">
+						<span>было успешно обучено хоккею
+						</span>
+					</div>
+					<div class="sliderbtns">
+						<button class="slider-btn"><img class="slider-btn_img" src="img/prev_btn.png" alt="prev"></button>
+						<button class="slider-btn"><img class="slider-btn_img" src="img/next_btn.png" alt="next"></button>
+					</div>
+				</div>
+				<div class="slider-slider">
+					<img src="img/slider-img.png" alt="">
+				</div>
+			</div>
+			<!-- Prices -->
+			<div class="prices">
+				<h1 class="prices-title">ЦЕНЫ</h1>
+				<div class="prices-element element-1">
+					<h3 class="prices-element-title">Безлимит</h3>
+					<div class="prices-element-text">
+						<p>10-13 ледовых тренировок 8-9 залов</p>
+						<p style="margin-top: 4vw;">*действуют 30 дней</p>
+						<p class="prices-element-price">10 000</p>
+						<button class="text-in-redbox prices-element-btn">КУПИТЬ</button>
+					</div>
+				</div>
+				<div class="prices-element element-2">
+					<h3 class="prices-element-title">Разовый</h3>
+					<div class="prices-element-text">
+						<p>1 ледовая тренировка 8-9 залов</p>
+						<p style="margin-top: 4vw;">*действуют 30 дней</p>
+						<p class="prices-element-price">1 200</p>
+						<button class="text-in-redbox  prices-element-btn">КУПИТЬ</button>
+					</div>
+				</div>
+				<div class="prices-element element-3">
+					<h3 class="prices-element-title">ОФП</h3>
+					<div class="prices-element-text">
+						<p>10-13 ледовых тренировок 8-9 залов</p>
+						<p style="margin-top: 4vw;">*действуют 30 дней</p>
+						<p class="prices-element-price">7 000</p>
+						<button class="text-in-redbox  prices-element-btn">КУПИТЬ</button>
+					</div>
+				</div>
+				<div class="prices-element element-4">
+					<h3 class="prices-element-title individual-title">Индивидуальный</h3>
+					<div class="prices-element-text">
+						<p>3 ледовых тренировок 8-9 залов</p>
+						<p style="margin-top: 4vw;">*действуют 30 дней</p>
+						<p class="prices-element-price">4 000</p>
+						<button class="text-in-redbox  prices-element-btn">КУПИТЬ</button>
+					</div>
+				</div>
+			</div>
+			<div class="form-" id="form">
+				<h1 class="form-title">
+					<p>запись</p> на <span class="text-in-bluebox form-box">пробное</span> занятие
+				</h1>
+				<div class="form-container">
+					<img src="img/form-img.png" alt="MESSSIIIII">
+					<form action="POST" class="form">
+						<input type="text" class="form-input" placeholder="ВАШЕ ИМЯ" required>
+						<input type="text" class="form-input" placeholder="ИМЯ РЕБЕНКА" required>
+						<input type="text" class="form-input" placeholder="E-MAIL" required>
+						<input type="text" class="form-input" placeholder="+7(999)999-99-99" required>
+						<button class="text-in-redbox form-btn">отправить</button>
+					</form>
+				</div>
+			</div>
+		</main>
+	</div>
+	<footer class="footer" id="contacts">
+		<img class="footer-img" src="img/logo.png" alt="logo">
+		<div class="footer-container">
+			<h1 class="footer-title">+7(901)431-09-69</h1>
+			<div class="footer-subcontainer">
+				<div class="footer-subsubcontainer">
+					<a href="#">
+						<p>о школе</p>
+					</a>
+					<a href="#">
+						<p>турниры</p>
+					</a>
+					<a href="#">
+						<p>тренеры</p>
+					</a>
+				</div>
+				<div class="footer-subsubcontainer">
+					<a href="#">
+						<p>адреса</p>
+					</a>
+					<a href="#">
+						<p>политика</p>
+					</a>
+					<a href="#">
+						<p>link</p>
+					</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+</body>
+
+</html>
